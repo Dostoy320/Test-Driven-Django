@@ -5,6 +5,7 @@ class NewVisitorTest(unittest.TestCase):
 
 	def setUp(self):
 		self.browser = webdriver.Firefox()
+		self.browser.implicityly_wait(3)
 
 	def tearDown(self):
 		self.browser.quit()
@@ -18,7 +19,6 @@ class NewVisitorTest(unittest.TestCase):
 		self.fail('Finish the test!')
 
 		# She is invited to enter a to-do item straight away
-		[...rest of comments as before]
 
 		# She types "Buy fancy cheeses" into a text box.
 
