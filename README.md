@@ -47,7 +47,8 @@ refactoring, you'll know soon enough.
     * Duplicate code appears in the FT as we test for each item.
 * Duplicate code is replaced with a helper method.  The method name doesn't contain "test"
 and therefore is not run during the test, but rather called by one of the tests.
-NEXT UP: databases
+* Stumbled across the book [Code Complete][cc].
+* NEXT UP: databases
 
 
 
@@ -62,3 +63,4 @@ NEXT UP: databases
 
 [tddp]: http://chimera.labs.oreilly.com/books/1234000000754 "Test Driven Site"
 [df]: http://daringfireball.net/projects/markdown/syntax
+[cc]: http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/ref=lh_ni_t?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
