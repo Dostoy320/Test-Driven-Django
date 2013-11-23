@@ -24,7 +24,7 @@ Using the [online version][tddp] of the book.
 * created command line alias pmt="python3 manage.py test"
 
 #### Day 3 (Chapter 4 & 5):
-* Added code to *fucntional_tests.py* :
+* Added code to *functional_tests.py* :
     * check if input box and placeholder text exists
     * import the selenium method "Keys" to enter a value into the box
     * check if a table containing that entered value exists
