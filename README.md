@@ -41,6 +41,13 @@ refactoring, you'll know soon enough.
 * Added code to home.html and views.py to handle a POST request
     * gave form method="POST"
     * views.home_page includes a POST.get when rendering the html
+* The functional test (FT) checks for entered items on the list.
+* Adding a second item creates two problems:
+    * The test fails because the second item ends up replacing the first. (No persistence)
+    * Duplicate code appears in the FT as we test for each item.
+* Duplicate code is replaced with a helper method.  The method name doesn't contain "test"
+and therefore is not run during the test, but rather called by one of the tests.
+NEXT UP: databases
 
 
 
