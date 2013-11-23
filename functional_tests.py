@@ -12,6 +12,11 @@ class NewVisitorTest(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
+    def check_for_row_in_list_table(self, row_text):
+        table = self.browser.find_element_by_id('id_list_table')
+        rows = table.find_elements_by_tag_name('tr')
+        self.assertIn(row_text, [row.text for row in rows])
+
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Jeni visits the following url:
         self.browser.get('http://localhost:8000')
@@ -35,9 +40,7 @@ class NewVisitorTest(unittest.TestCase):
         # "1. Buy fancy cheeses" as an item in the to-do list.
         inputbox.send_keys(Keys.ENTER)
 
-        table = self.browser.find_element_by_id('id_list_table')
-        rows = table.find_elements_by_tag_name('tr')
-        self.assertIn('1: Buy fancy cheeses', [row.text for row in rows])
+        self.check_for_row_in_list_table('1: Buy fancy cheeses')
 
         # There is still a text box inviting her to enter another item.
         # Jeni adds "buy a case of wine" to the list.
@@ -46,11 +49,8 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys(Keys.ENTER)
 
         # The page updates again, with a second item: 2:
-        table = self.browser.find_element_by_id('id_list_table')
-        rows = table.find_elements_by_tag_name('tr')
-        self.assertIn('1: Buy fancy cheeses', [row.text for row in rows])
-        self.assertIn('2: Buy a case of wine', [row.text for row in rows])
-
+        self.check_for_row_in_list_table('1: Buy fancy cheeses')
+        self.check_for_row_in_list_table('2: Buy a case of wine')
 
 
 

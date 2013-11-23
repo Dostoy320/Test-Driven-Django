@@ -37,6 +37,12 @@ it's easy to see how well the tests back up the code.  If you break something wh
 refactoring, you'll know soon enough.
 * Admired some nice flowcharts at the end of chapter 4
 
+#### Day 4 (Chapter 5):
+* Added code to home.html and views.py to handle a POST request
+    * gave form method="POST"
+    * views.home_page includes a POST.get when rendering the html
+
+
 
 
 
