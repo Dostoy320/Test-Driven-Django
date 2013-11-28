@@ -50,6 +50,7 @@ and therefore is not run during the test, but rather called by one of the tests.
 * Stumbled across the book [Code Complete][cc].
 * Set up sqlite3 database by naming it in settings.py and running syncdb
 * I'm suffering from some glitch that runs 400+ unit tests. Frustrating.
+* Next up: Chapter 6!
 
 
 
